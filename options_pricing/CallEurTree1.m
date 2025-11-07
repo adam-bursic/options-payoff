@@ -1,4 +1,4 @@
-% Alex Kind (2025) Lecture: QAM, HSG
+% A First Pricing Routine for European Call Options. Alex Kind (2025) Lecture: QAM, HSG
 
 function value = CallEurTree1(sigma, r, K, S0, div, T, n)
 
@@ -30,5 +30,6 @@ for j = n:-1:1
         opMat(i,j) = disc*(p*opMat(i,j+1)+q*opMat(i+1,j+1));
     end
 end
+
 
 value = opMat(1,1);
